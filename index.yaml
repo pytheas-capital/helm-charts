@@ -100,6 +100,28 @@ entries:
     version: 2.8.1
   mcrouter:
   - apiVersion: v2
+    appVersion: 0.40.2
+    created: "2023-09-27T14:21:27.655726463Z"
+    dependencies:
+    - condition: mcrouter.memcached.enabled
+      name: memcached
+      repository: https://charts.bitnami.com/bitnami
+      version: ~6.6.2
+    description: Mcrouter is a memcached protocol router for scaling memcached deployments.
+    digest: 787a32748d0e84f00036e71f43089606b85d7b289774c03c96eef732768ce72f
+    home: https://github.com/facebook/mcrouter
+    icon: https://img.stackshare.io/service/4370/G7xgmEZ.png
+    maintainers:
+    - email: david@davidkarlsen.com
+      name: davidkarlsen
+    name: mcrouter
+    sources:
+    - https://github.com/facebook/mcrouter
+    - https://github.com/evryfs/docker-mcrouter
+    urls:
+    - https://github.com/pytheas-capital/helm-charts/releases/download/mcrouter-0.4.2/mcrouter-0.4.2.tgz
+    version: 0.4.2
+  - apiVersion: v2
     appVersion: 0.40.1
     created: "2023-09-27T09:14:56.374330712Z"
     dependencies:
@@ -121,6 +143,34 @@ entries:
     urls:
     - https://github.com/pytheas-capital/helm-charts/releases/download/mcrouter-0.4.1/mcrouter-0.4.1.tgz
     version: 0.4.1
+  permission-manager:
+  - apiVersion: v2
+    appVersion: 1.9.0
+    created: "2023-09-27T14:21:27.82244027Z"
+    description: A Helm chart for Permission Manager, a simple to use, web application
+      that enables a super-easy and user-friendly RBAC management for Kubernetes.
+    digest: 7a46f7e5f7ac8501f8cd235e4e148088391b3be5532028a782b734954855e53d
+    home: https://sighup.io
+    icon: https://sighup.io/assets/sighup-logo-white.svg
+    keywords:
+    - permission manager
+    - rbac
+    - policy
+    - oss
+    - user management
+    - sighup
+    - ui
+    - dashboard
+    - web
+    - rego
+    - webapp
+    name: permission-manager
+    sources:
+    - https://github.com/sighupio/permission-manager/
+    type: application
+    urls:
+    - https://github.com/pytheas-capital/helm-charts/releases/download/permission-manager-0.1.2/permission-manager-0.1.2.tgz
+    version: 0.1.2
   spring-boot-admin:
   - apiVersion: v2
     appVersion: 2.7.10
@@ -144,4 +194,4 @@ entries:
     urls:
     - https://github.com/pytheas-capital/helm-charts/releases/download/spring-boot-admin-0.1.10/spring-boot-admin-0.1.10.tgz
     version: 0.1.10
-generated: "2023-09-27T09:14:56.593186003Z"
+generated: "2023-09-27T14:21:27.82245037Z"
