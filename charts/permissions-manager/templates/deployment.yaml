@@ -40,7 +40,7 @@ spec:
                   fieldPath: metadata.namespace
           envFrom:
             - secretRef:
-                name: {{ include ".Values.config.secretName" . }}
+                name: {{ .Values.config.secretName }}
           ports:
             - name: http
               containerPort: 4000
