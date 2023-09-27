@@ -1,4 +1,4 @@
-name: "Publish charts to repo"
+name: Release Charts
 on:
   push:
     branches:
