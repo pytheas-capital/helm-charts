@@ -1,0 +1,147 @@
+apiVersion: v1
+entries:
+  dependency-track:
+  - apiVersion: v2
+    appVersion: 4.6.3
+    created: "2023-09-27T09:14:55.842599384Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://raw.githubusercontent.com/bitnami/charts/eb5f9a9513d987b519f0ecd732e7031241c50328/bitnami
+      version: ~10.10
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.0.x
+    description: 'Dependency-Track is an intelligent Software Supply Chain Component
+      Analysis platform that allows organizations to identify and reduce risk from
+      the use of third-party and open source components. Dependency-Track takes a
+      unique and highly beneficial approach by leveraging the capabilities of Software
+      Bill-of-Materials (SBOM). This approach provides capabilities that traditional
+      Software Composition Analysis (SCA) solutions cannot achieve. '
+    digest: fa895389f7cabf23ade2de4556f2915e340c6a656ebd0e06830c8ee243a52324
+    home: https://dependencytrack.org/
+    icon: https://raw.githubusercontent.com/DependencyTrack/branding/master/dt-logo-black-text.svg
+    keywords:
+    - security
+    - dependency
+    - dependency-track
+    - OWASP
+    - Supply Chain Component Analysis
+    maintainers:
+    - email: david@davidkarlsen.com
+      name: davidkarlsen
+    - email: eth0linak@gmail.com
+      name: otterian
+    name: dependency-track
+    sources:
+    - https://docs.dependencytrack.org/
+    - https://github.com/evryfs/helm-charts
+    urls:
+    - https://github.com/pytheas-capital/helm-charts/releases/download/dependency-track-1.5.5/dependency-track-1.5.5.tgz
+    version: 1.5.5
+  ecr-proxy:
+  - apiVersion: v2
+    appVersion: 1.5.1
+    created: "2023-09-27T09:14:56.041213349Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.0.x
+    description: A Helm chart for Kubernetes
+    digest: 328f83c40f757fd6e7c5717158a18f5a5621fddd9eaca0e0ae451f4c4b39423d
+    home: https://github.com/Lotto24/aws-ecr-http-proxy/
+    icon: https://xebialabs.com/wp-content/uploads/2018/10/AWS-ECR-logo-1.jpg
+    keywords:
+    - ECR
+    - AWS
+    - Proxy
+    - Docker
+    - Container
+    - Image
+    - ElasticContainerRegistry
+    maintainers:
+    - email: david@davidkarlsen.com
+      name: davidkarlsen
+    name: ecr-proxy
+    sources:
+    - https://github.com/evryfs/helm-charts/tree/master/charts/ecr-proxy
+    - https://github.com/Lotto24/aws-ecr-http-proxy/
+    - https://hub.docker.com/r/esailors/aws-ecr-http-proxy/
+    type: application
+    urls:
+    - https://github.com/pytheas-capital/helm-charts/releases/download/ecr-proxy-0.2.9/ecr-proxy-0.2.9.tgz
+    version: 0.2.9
+  github-actions-runner-operator:
+  - apiVersion: v2
+    appVersion: v0.11.1
+    created: "2023-09-27T09:14:56.213477829Z"
+    description: A Helm chart for the github action runner operator.
+    digest: 054045397c452c340499d30c4155e2e80f4b3c457857684dd7fc4ac5bc89aa00
+    home: https://github.com/evryfs/github-actions-runner-operator/
+    icon: https://media-exp1.licdn.com/dms/image/C4D0BAQFZ80eOhCewVw/company-logo_200_200/0?e=2159024400&v=beta&t=XFbeA46Og-bBC5Th2aFMwXfB1FssEqN5lx-hKraJuAg
+    keywords:
+    - github
+    - action runner
+    - operator
+    - ci
+    - agent
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: david.karlsen@evry.com
+      name: davidkarlsen
+      url: https://github.com/davidkarlsen/
+    name: github-actions-runner-operator
+    sources:
+    - https://github.com/evryfs/github-actions-runner-operator/
+    - https://github.com/evryfs/helm-charts/
+    type: application
+    urls:
+    - https://github.com/pytheas-capital/helm-charts/releases/download/github-actions-runner-operator-2.8.1/github-actions-runner-operator-2.8.1.tgz
+    version: 2.8.1
+  mcrouter:
+  - apiVersion: v2
+    appVersion: 0.40.1
+    created: "2023-09-27T09:14:56.374330712Z"
+    dependencies:
+    - condition: mcrouter.memcached.enabled
+      name: memcached
+      repository: https://charts.bitnami.com/bitnami
+      version: ~6.6.2
+    description: Mcrouter is a memcached protocol router for scaling memcached deployments.
+    digest: fc8e3ea2d81eebf721ce9a5009e8c41403dc384f76d353468bb326a442d9a49e
+    home: https://github.com/facebook/mcrouter
+    icon: https://img.stackshare.io/service/4370/G7xgmEZ.png
+    maintainers:
+    - email: david@davidkarlsen.com
+      name: davidkarlsen
+    name: mcrouter
+    sources:
+    - https://github.com/facebook/mcrouter
+    - https://github.com/evryfs/docker-mcrouter
+    urls:
+    - https://github.com/pytheas-capital/helm-charts/releases/download/mcrouter-0.4.1/mcrouter-0.4.1.tgz
+    version: 0.4.1
+  spring-boot-admin:
+  - apiVersion: v2
+    appVersion: 2.7.10
+    created: "2023-09-27T09:14:56.593181503Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 2.2.x
+    description: Spring Boot Admin. Admin console for sb apps.
+    digest: c5995a6777ad466697434f10c88039fe3d6c4b925867f19b7281950dd96b04d3
+    icon: https://media-exp1.licdn.com/dms/image/C4D0BAQFZ80eOhCewVw/company-logo_200_200/0?e=2159024400&v=beta&t=XFbeA46Og-bBC5Th2aFMwXfB1FssEqN5lx-hKraJuAg
+    maintainers:
+    - email: david@davidkarlsen.com
+      name: davidkarlsen
+    name: spring-boot-admin
+    sources:
+    - https://github.com/codecentric/spring-boot-admin
+    - https://github.com/evryfs/spring-boot-admin/
+    - https://github.com/evryfs/helm-charts
+    type: application
+    urls:
+    - https://github.com/pytheas-capital/helm-charts/releases/download/spring-boot-admin-0.1.10/spring-boot-admin-0.1.10.tgz
+    version: 0.1.10
+generated: "2023-09-27T09:14:56.593186003Z"
