@@ -20,6 +20,15 @@ spec:
         app: {{ template "fullname" . }}
         release: "{{ .Release.Name }}"
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node-role.kubernetes.io/master
+                operator: NotIn
+                values:
+                - master
       nodeSelector: {{ toYaml .Values.nodeSelector | nindent 8 }}
       tolerations: {{ toYaml .Values.tolerations | nindent 8 }}
       securityContext: {{ toYaml .Values.securityContext | nindent 8 }}
