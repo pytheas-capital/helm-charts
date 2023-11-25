@@ -11,7 +11,8 @@ metadata:
     {{- end }}
 spec:
   strategy:
-    type: RollingUpdate
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
   revisionHistoryLimit: 1
   replicas: {{ .Values.haproxy.replicas }}
   selector:

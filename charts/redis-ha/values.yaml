@@ -15,7 +15,13 @@ imagePullSecrets: []
 
 ## replicas number for each component
 replicas: 3
-
+deploymentStrategy:
+  type: RollingUpdate
+  rollingUpdate:
+    maxUnavailable: 1
+  # rollingUpdate:
+  #   maxSurge: 25%
+  #   maxUnavailable: 25%
 ## Customize the statefulset pod management policy:
 ## ref: https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/#pod-management-policies
 podManagementPolicy: OrderedReady
