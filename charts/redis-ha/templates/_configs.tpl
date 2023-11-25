@@ -5,7 +5,15 @@
 {{ tpl .Values.redis.customConfig . | indent 4 }}
 {{- else }}
     dir "/data"
-    port {{ .Values.redis.port }}
+    {{- if .Values.redis.bind }}
+    bind {{ .Values.redis.bind }}
+    {{- end }}
+    {{- if .Values.sentinel.tlsPort }}
+    port 0
+    {{- else }}
+    port 6379
+    {{- end }}
+    {{- if .Values.redis.bind }}
     {{- if .Values.sentinel.tlsPort }}
     tls-port {{ .Values.redis.tlsPort }}
     tls-cert-file /tls-certs/{{ .Values.tls.certFile }}

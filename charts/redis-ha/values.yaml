@@ -236,6 +236,7 @@ sysctlImage:
 ## Redis specific configuration options
 redis:
   port: 6379
+  bind: 0.0.0.0
   masterGroupName: "mymaster"       # must match ^[\\w-\\.]+$) and can be templated
 
   ## Configures redis with tls-port parameter
@@ -322,7 +323,7 @@ sentinel:
   port: 26379
 
   ## Configure the 'bind' directive to bind to a list of network interfaces
-  # bind: 0.0.0.0
+  bind: 0.0.0.0
 
   ## Configures sentinel with tls-port parameter
   # tlsPort: 26385
