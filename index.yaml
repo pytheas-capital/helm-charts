@@ -267,6 +267,29 @@ entries:
   redis-ha:
   - apiVersion: v2
     appVersion: 7.2.3
+    created: "2023-11-25T23:23:33.62525759Z"
+    description: This Helm chart provides a highly available Redis implementation
+      with a master/slave configuration and uses Sentinel sidecars for failover management
+    digest: d9d3d1f8a265ef6b930290d083666fd11fe4ea386c33167806a36d778283c984
+    home: http://redis.io/
+    icon: https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Redis_Logo.svg/1200px-Redis_Logo.svg.png
+    keywords:
+    - redis
+    - keyvalue
+    - database
+    maintainers:
+    - email: eric.taieb@pytheascapital.com
+      name: teknologista
+    name: redis-ha
+    sources:
+    - https://redis.io/download
+    - https://github.com/pytheas-capital/helm-charts/charts
+    - https://github.com/oliver006/redis_exporter
+    urls:
+    - https://github.com/pytheas-capital/helm-charts/releases/download/redis-ha-4.24.7/redis-ha-4.24.7.tgz
+    version: 4.24.7
+  - apiVersion: v2
+    appVersion: 7.2.3
     created: "2023-11-25T23:02:20.017607756Z"
     description: This Helm chart provides a highly available Redis implementation
       with a master/slave configuration and uses Sentinel sidecars for failover management
@@ -451,4 +474,4 @@ entries:
     urls:
     - https://github.com/pytheas-capital/helm-charts/releases/download/spring-boot-admin-0.1.10/spring-boot-admin-0.1.10.tgz
     version: 0.1.10
-generated: "2023-11-25T23:02:20.01765333Z"
+generated: "2023-11-25T23:23:33.625307114Z"
