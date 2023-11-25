@@ -292,7 +292,6 @@ spec:
         resources:
 {{ toYaml .Values.redis.resources | indent 10 }}
         ports:
-          -
         {{- if ne (int .Values.redis.port) 0 }}
         - name: redis
           containerPort: {{ .Values.redis.port }}
