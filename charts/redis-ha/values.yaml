@@ -15,10 +15,7 @@ imagePullSecrets: []
 
 ## replicas number for each component
 replicas: 3
-deploymentStrategy:
-  type: RollingUpdate
-  rollingUpdate:
-    maxUnavailable: 1
+
   # rollingUpdate:
   #   maxSurge: 25%
   #   maxUnavailable: 25%
@@ -73,6 +70,10 @@ serviceAccount:
 haproxy:
   enabled: false
   servicePort: 6379
+  deploymentStrategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
   containerPort: 6379
   ## Enable TLS termination on HAproxy, This will create a volume mount
   tls:
