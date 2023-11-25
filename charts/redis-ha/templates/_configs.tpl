@@ -13,7 +13,6 @@
     {{- else }}
     port 6379
     {{- end }}
-    {{- if .Values.redis.bind }}
     {{- if .Values.sentinel.tlsPort }}
     tls-port {{ .Values.redis.tlsPort }}
     tls-cert-file /tls-certs/{{ .Values.tls.certFile }}
@@ -43,7 +42,6 @@
 {{- end }}
 {{- end }}
 {{- end }}
-
 {{- define "config-sentinel.conf" }}
 {{- if .Values.sentinel.customConfig }}
 {{ tpl .Values.sentinel.customConfig . | indent 4 }}
