@@ -8,12 +8,8 @@
     {{- if .Values.redis.bind }}
     bind {{ .Values.redis.bind }}
     {{- end }}
-    {{- if .Values.sentinel.tlsPort }}
-    port 0
-    {{- else }}
-    port 6379
-    {{- end }}
-    {{- if .Values.sentinel.tlsPort }}
+    port {{ .Values.redis.port }}
+    {{- if .Values.redis.tlsPort }}
     tls-port {{ .Values.redis.tlsPort }}
     tls-cert-file /tls-certs/{{ .Values.tls.certFile }}
     tls-key-file /tls-certs/{{ .Values.tls.keyFile }}
