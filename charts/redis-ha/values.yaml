@@ -471,7 +471,7 @@ topologySpreadConstraints:
 exporter:
   enabled: false
   image: oliver006/redis_exporter
-  tag: v1.43.0
+  tag: v1.55.0
   pullPolicy: IfNotPresent
 
   # prometheus port & scrape path
@@ -485,7 +485,7 @@ exporter:
   address: localhost
 
   ## Set this to true if you want to connect to redis tls port
-  # sslEnabled: true
+  sslEnabled: true
 
   # cpu/memory resource limits/requests
   resources: {}
