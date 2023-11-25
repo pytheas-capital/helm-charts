@@ -1,4 +1,6 @@
 name: Release Charts
+env:
+  GITHUB_TOKEN: ${{ secrets.TOKEN }}
 on:
   push:
     branches:
